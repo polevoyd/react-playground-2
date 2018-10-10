@@ -1,3 +1,7 @@
+* {
+  outline: 3px solid orange;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +15,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.calculator-board
+{
+  display: grid;
+
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+
+  max-width: 40em;
+  max-height: 60em;
+
+  margin: 0 auto;
+}
+
+.square-button
+{
+  height: 10em;
+  background-color: orangered;
+}
+
+.input-field {
+  grid-row: 1;
+  grid-column: 1/5;
 }
