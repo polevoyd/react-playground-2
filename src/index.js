@@ -11,22 +11,22 @@ class CalcBoard extends React.Component {
         return (
             <div className="calculator-board">
                 <input className="input-field"></input>
-                <div className="square-button">*</div>
-                <div className="square-button">%</div>
-                <div className="square-button">+</div>
-                <div className="square-button">-</div>
-                <div className="square-button">1</div>
-                <div className="square-button">2</div>
-                <div className="square-button">3</div>
-                <div className="square-button">4</div>
-                <div className="square-button">5</div>
-                <div className="square-button">6</div>
-                <div className="square-button">7</div>
-                <div className="square-button">8</div>
-                <div className="square-button">9</div>
-                <div className="square-button">0</div>
-                <div className="square-button">C</div>
-                <div className="square-button">=</div>
+                <div className="square-button"><h3>*</h3></div>
+                <div className="square-button"><h3>%</h3></div>
+                <div className="square-button"><h3>+</h3></div>
+                <div className="square-button"><h3>-</h3></div>
+                <div className="square-button"><h3>1</h3></div>
+                <div className="square-button"><h3>2</h3></div>
+                <div className="square-button"><h3>3</h3></div>
+                <div className="square-button"><h3>4</h3></div>
+                <div className="square-button"><h3>5</h3></div>
+                <div className="square-button"><h3>6</h3></div>
+                <div className="square-button"><h3>7</h3></div>
+                <div className="square-button"><h3>8</h3></div>
+                <div className="square-button"><h3>9</h3></div>
+                <div className="square-button"><h3>0</h3></div>
+                <div className="square-button"><h3>C</h3></div>
+                <div className="square-button"><h3>=</h3></div>
          
             </div>
         )
