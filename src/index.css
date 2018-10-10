@@ -1,21 +1,7 @@
-* {
+/* * {
   outline: 3px solid orange;
-}
+} */
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
 .calculator-board
 {
@@ -29,15 +15,19 @@ code {
 
   margin: 5em auto;
 
+  border: 1px solid black;
+  border-radius: 0.5em;
+
 }
 
-.square-button
-{
+.square-button {
   height: 10em;
-  background-color: orangered;
+  /* border */
 }
 
 .input-field {
+  height: 10em;
   grid-row: 1;
   grid-column: 1/5;
+
 }

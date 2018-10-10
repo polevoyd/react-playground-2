@@ -10,6 +10,7 @@ class CalcBoard extends React.Component {
 
         return (
             <div className="calculator-board">
+                <input className="input-field"></input>
                 <div className="square-button">*</div>
                 <div className="square-button">%</div>
                 <div className="square-button">+</div>
