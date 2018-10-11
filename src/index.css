@@ -9,10 +9,10 @@
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 20% 20% 20% 20% 20%;
 
-  max-width: 40em;
-  max-height: 60em;
+  max-width: 20em;
+  max-height: 30em;
 
-  margin: 5em auto;
+  margin: 10em auto;
 
   border: 1px solid black;
   border-radius: 0.5em;
@@ -20,21 +20,28 @@
 }
 
 .square-button {
-  height: 10em;
+  height: 5em;
   border: 1px solid black;
 
   text-align: center;
 }
 
-h3 {
-  height: 100%;
-  font-size: 3em;
+.square-button:hover {
+  background-color: antiquewhite;
 }
 
-.input-field {
-  height: 10em;
+h3 {
+  height: 100%;
+  font-size: 1.5em;
+}
+
+.input-field[type="text"] {
+  
   grid-row: 1;
   grid-column: 1/5;
+  font-size: 5em;
+}
 
+.input-field[type="text"]:focus {
   
 }
