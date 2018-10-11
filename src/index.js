@@ -24,7 +24,7 @@ class CalcButtons extends React.Component {
 
         return (
             <div className="square-buttons">
-               <SquareButton
+               {buttonsArray.map( elm => <SquareButton symbol={elm} />).join('')}
             </div>
         );
     }
