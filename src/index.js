@@ -57,8 +57,8 @@ class CalcBoard extends React.Component {
                 <div className="square-button" onClick={this.addValueToInput}><h3>8</h3></div>
                 <div className="square-button" onClick={this.addValueToInput}><h3>9</h3></div>
                 <div className="square-button" onClick={this.addValueToInput}><h3>0</h3></div>
-                <div className="square-button operations"><h3>C</h3></div>
-                <div className="square-button operations"><h3>=</h3></div>
+                <div className="square-button" onClick={this.clearInputField}><h3>C</h3></div>
+                <div className="square-button" onClick={this.showResult}><h3>=</h3></div>
          
             </div>
         )
