@@ -9,7 +9,10 @@ class CalcBoard extends React.Component {
         super();
 
         this.state = {
-            calculations: ''
+            currentValue: '',
+            firstValue: 0,
+            secondValue: 0,
+            operation: ''
         };
 
         this.addValueToInput = this.addValueToInput.bind(this);
@@ -19,23 +22,48 @@ class CalcBoard extends React.Component {
 
     addValueToInput(event) {
 
-        // console.log(event.target.textContent)
-
         // adding number to a field
-        // document.querySelector('.input-field').value += event.target.textContent;
-
         let currentInputValue = document.querySelector('.input-field').value += event.target.textContent;
-        // let tempValueOne = 0;
-        // let tempValueTwo = 0;
-        // let tempString = ''; 
-
-
-        console.log(currentInputValue)
-
+ 
+        // setting currentValue in state to input field 
         this.setState({
-            calculations: parseInt(currentInputValue)
+            currentValue: parseInt(currentInputValue)
         });
     }
+
+    doOperation(event)
+    {
+        console.log(event.target.textContent)
+        switch (event.target.textContent) {
+            case '*':
+                // save input value to a firstValue
+                
+                // clean currentValue
+                // save operation
+                break;
+            case '%':
+                
+                break;
+            case '+':
+                
+                break;
+            case '-':
+                
+                break;
+            case '=':
+                
+                break;
+            case 'C':
+                
+                break;
+        
+            default:
+                break;
+        }
+
+    }
+
+
 
     render(){
 
@@ -43,10 +71,10 @@ class CalcBoard extends React.Component {
             <div className="calculator-board">
 
                 <input className="input-field" type="text" value={this.state.calculations} placeholder="0"></input>
-                <div className="square-button operations"><h3>*</h3></div>
-                <div className="square-button operations"><h3>%</h3></div>
-                <div className="square-button operations"><h3>+</h3></div>
-                <div className="square-button operations"><h3>-</h3></div>
+                <div className="square-button" onClick={this.doOperation}><h3>*</h3></div>
+                <div className="square-button" onClick={this.doOperation}><h3>%</h3></div>
+                <div className="square-button" onClick={this.doOperation}><h3>+</h3></div>
+                <div className="square-button" onClick={this.doOperation}><h3>-</h3></div>
                 <div className="square-button" onClick={this.addValueToInput}><h3>1</h3></div>
                 <div className="square-button" onClick={this.addValueToInput}><h3>2</h3></div>
                 <div className="square-button" onClick={this.addValueToInput}><h3>3</h3></div>
