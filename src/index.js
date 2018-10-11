@@ -22,11 +22,9 @@ class CalcButtons extends React.Component {
     render() {
         const buttonsArray = ['*', '%', '+', '-', '1', '2', '3', 'C', '4', '5', '6', '=', '7', '8', '9','0'];
 
-        return (
-            <div className="square-buttons">
-               {buttonsArray.map( elm => <SquareButton symbol={elm} />).join('')}
-            </div>
-        );
+    return buttonsArray.map( element => (<SquareButton symbol={element} />));
+
+        
     }
 }
 
@@ -42,7 +40,9 @@ class CalcBoard extends React.Component {
         return (
             <div className="calculator-board">
                 <CalcInputField />
-                <CalcButtons />
+                <div className="square-buttons"> 
+                    <CalcButtons />
+                </div>
             </div>
         )
     }
