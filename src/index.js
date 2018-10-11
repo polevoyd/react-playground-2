@@ -22,7 +22,7 @@ class CalcButtons extends React.Component {
     render() {
         const buttonsArray = ['*', '%', '+', '-', '1', '2', '3', 'C', '4', '5', '6', '=', '7', '8', '9','0'];
 
-    return buttonsArray.map( element => (<SquareButton symbol={element} />));
+    return buttonsArray.map( (element, index) => (<SquareButton symbol={element} key={'button_' + element} />));
 
         
     }
