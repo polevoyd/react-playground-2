@@ -33,11 +33,16 @@ class CalcBoard extends React.Component {
 
     doOperation(event)
     {
-        console.log(event.target.textContent)
+
+        // save input value to a firstValue
+        // and clean current value
+        this.setState({
+            firstValue: this.state.firstValue + parseInt(this.state.currentValue),
+            currentValue: ''
+        })
+        
         switch (event.target.textContent) {
             case '*':
-                // save input value to a firstValue
-                
                 // clean currentValue
                 // save operation
                 break;
