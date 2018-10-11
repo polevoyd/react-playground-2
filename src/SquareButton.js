@@ -5,9 +5,9 @@ import './index.css';
 
 class SquaredButton extends React.Component {
 
-    render() {
+    render(props) {
         return (
-            
+            <div className="square-button"><h3>{props.symbol}</h3></div>
         );
     }
 }

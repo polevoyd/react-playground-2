@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import SquareButton from './SquareButton';
+
 
 class CalcInputField extends React.Component {
 
@@ -18,24 +20,11 @@ class CalcInputField extends React.Component {
 class CalcButtons extends React.Component {
 
     render() {
+        const buttonsArray = ['*', '%', '+', '-', '1', '2', '3', 'C', '4', '5', '6', '=', '7', '8', '9','0'];
+
         return (
             <div className="square-buttons">
-                <div className="square-button"><h3>*</h3></div>
-                <div className="square-button"><h3>%</h3></div>
-                <div className="square-button"><h3>+</h3></div>
-                <div className="square-button"><h3>-</h3></div>
-                <div className="square-button"><h3>1</h3></div>
-                <div className="square-button"><h3>2</h3></div>
-                <div className="square-button"><h3>3</h3></div>
-                <div className="square-button"><h3>C</h3></div>
-                <div className="square-button"><h3>4</h3></div>
-                <div className="square-button"><h3>5</h3></div>
-                <div className="square-button"><h3>6</h3></div>
-                <div className="square-button"><h3>=</h3></div>
-                <div className="square-button"><h3>7</h3></div>
-                <div className="square-button"><h3>8</h3></div>
-                <div className="square-button"><h3>9</h3></div>
-                <div className="square-button"><h3>0</h3></div>
+               <SquareButton
             </div>
         );
     }
