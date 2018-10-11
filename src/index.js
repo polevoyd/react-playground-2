@@ -36,7 +36,7 @@ class CalcButtons extends React.Component {
                 <div className="square-button"><h3>0</h3></div>
                 <div className="square-button"><h3>C</h3></div>
                 <div className="square-button"><h3>=</h3></div>
-                </div>
+            </div>
         );
     }
 }
