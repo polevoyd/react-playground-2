@@ -27,7 +27,7 @@ class CalcBoard extends React.Component {
         let currentInputValue = document.querySelector('.input-field').value += event.target.textContent;
         // let tempValueOne = 0;
         // let tempValueTwo = 0;
-        // let tempString = '';
+        // let tempString = ''; 
 
 
         console.log(currentInputValue)
