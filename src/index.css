@@ -6,8 +6,8 @@
 .calculator-board {
   display: grid;
 
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
 
   max-width: 20em;
   max-height: 30em;
@@ -17,6 +17,14 @@
   border: 1px solid black;
   border-radius: 0.5em;
 
+}
+
+.square-buttons {
+
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-row: 2/5;
 }
 
 .square-button {
@@ -38,7 +46,7 @@ h3 {
 .input-field[type="text"] {
   
   grid-row: 1;
-  grid-column: 1/5;
+  grid-column: 1;
   font-size: 5em;
 }
 
