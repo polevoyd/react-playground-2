@@ -70,7 +70,6 @@ class CalcBoard extends React.Component {
 
 
 
-
     render(){
         return (
             <div className="calculator-board">
