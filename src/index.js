@@ -5,7 +5,6 @@ import './index.css';
 import SquareButton from './SquareButton';
 
 
-// Main component
 class CalcButtons extends React.Component {
 
     constructor(props) {
@@ -18,12 +17,10 @@ class CalcButtons extends React.Component {
         };
     }
 
-    // click handler
     clickHandler(button) {
 
         const operations_ = ['*', '%', '-', '+'];
         const numbers_ = ['1','2','3','4','5','6','7','8','9','0'];
-
         const tempSymbol = button.target.textContent;
 
         if (operations_.includes(tempSymbol)) {
@@ -37,15 +34,18 @@ class CalcButtons extends React.Component {
         } else if (numbers_.includes(tempSymbol)) {
 
             if ((tempSymbol === '0') && (this.state.currentValue === '0')) {
+
                 this.setState({
                     currentValue: tempSymbol
                 })
             } else if ((tempSymbol !== '0') && (this.state.currentValue === '0')){
+
                 this.setState({
                     currentValue: tempSymbol
                 })
             } else {
                 if ((this.state.currentValue.length < 7)) {
+
                     this.setState({
                         currentValue: this.state.currentValue + tempSymbol
                     });
@@ -57,7 +57,6 @@ class CalcButtons extends React.Component {
             if ((this.state.currentValue) && (this.state.tempValue) && (this.state.tempOperation)) {
 
                 let result;
-
                 switch (this.state.tempOperation) {
 
                     case '+':
