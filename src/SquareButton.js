@@ -15,8 +15,6 @@ class SquareButton extends React.Component {
 
         const tempSymbol = button.target.textContent;
 
-        // console.log(button.target.textContent)
-
         if (operations_.includes(tempSymbol)) {
             
             console.log('this is a operation!');
@@ -25,9 +23,14 @@ class SquareButton extends React.Component {
 
             console.log('this is a number!');
         
-        } else {
+        } else if (tempSymbol === '='){
 
             console.log('this might be equal sign!');
+
+        } else {
+
+            console.log('this is a C sign!');
+
         }
 
 
