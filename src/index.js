@@ -107,7 +107,5 @@ class CalcButtons extends React.Component {
     }
 }
 
-
-
 // rendering whole thing to a page
 ReactDOM.render(<CalcButtons />, document.getElementById('root'));
