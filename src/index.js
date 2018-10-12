@@ -39,8 +39,11 @@ class CalcButtons extends React.Component {
                 this.setState({
                     currentValue: tempSymbol
                 })
+            } else if ((tempSymbol !== '0') && (this.state.currentValue === '0')){
+                this.setState({
+                    currentValue: tempSymbol
+                })
             } else {
-                
                 if ((this.state.currentValue.length < 7)) {
                     this.setState({
                         currentValue: this.state.currentValue + tempSymbol
