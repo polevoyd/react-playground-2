@@ -18,11 +18,6 @@ class CalcButtons extends React.Component {
         };
     }
 
-
-    setValueToInputField() {
-        
-    }
-
     sendValueToState(button) {
 
         const operations_ = ['*', '%', '-', '+'];
@@ -32,55 +27,54 @@ class CalcButtons extends React.Component {
 
         if (operations_.includes(tempSymbol)) {
             
-            console.log(tempSymbol);
-            
             this.setState({
                 tempValue: this.state.currentValue,
                 tempOperation: tempSymbol,
                 currentValue: ''
             });
 
-
         } else if (numbers_.includes(tempSymbol)) {
 
-            this.setState({
-                currentValue: this.state.currentValue + tempSymbol
-            })
-
+            if (this.state.currentValue.length < 7) {
+                this.setState({
+                    currentValue: this.state.currentValue + tempSymbol
+                });
+            }
+            
         } else if (tempSymbol === '='){
 
-            console.log(tempSymbol);
-            let result;
+            if ((this.state.currentValue) && (this.state.tempValue) && (this.state.tempOperation)) {
 
+                let result;
 
-            switch (this.state.tempOperation) {
+                switch (this.state.tempOperation) {
 
-                case '+':
-                result = parseInt(this.state.tempValue) + parseInt(this.state.currentValue);
-                break;
-
-                case '-':
-                result = parseInt(this.state.tempValue) - parseInt(this.state.currentValue);
-                break;
-
-                case '*':
-                result = parseInt(this.state.tempValue) * parseInt(this.state.currentValue);
-                break;
-
-                case '%':
-                result = parseInt(this.state.tempValue) / parseInt(this.state.currentValue);
-                break;
-            
-                default:
+                    case '+':
+                    result = parseInt(this.state.tempValue) + parseInt(this.state.currentValue);
                     break;
+
+                    case '-':
+                    result = parseInt(this.state.tempValue) - parseInt(this.state.currentValue);
+                    break;
+
+                    case '*':
+                    result = parseInt(this.state.tempValue) * parseInt(this.state.currentValue);
+                    break;
+
+                    case '%':
+                    result = parseInt(this.state.tempValue) / parseInt(this.state.currentValue);
+                    break;
+                    
+                    default:
+                    break;
+                }
+
+                this.setState({
+                    currentValue: result.toString(),
+                    tempOperation: '',
+                    tempValue: result.toString()
+                });
             }
-
-            this.setState({
-                currentValue: '',
-                tempOperation: '',
-                tempValue: result.toString()
-            });
-
         } else {
 
             this.setState({
