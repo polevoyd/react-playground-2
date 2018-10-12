@@ -18,7 +18,7 @@ class SquareButton extends React.Component {
 
         } else if (numbers_.includes(tempSymbol)) {
 
-            console.log(button);
+            console.log(this);
             // if numbers - then write value into a input field and add it to a current value
     
 
