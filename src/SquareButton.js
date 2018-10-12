@@ -5,7 +5,7 @@ import './index.css';
 class SquareButton extends React.Component {
 
 
-    sendValueToState(button, props) {
+    sendValueToState(button) {
 
         const operations_ = ['*', '%', '-', '+'];
         const numbers_ = ['1','2','3','4','5','6','7','8','9','0'];
@@ -18,9 +18,9 @@ class SquareButton extends React.Component {
 
         } else if (numbers_.includes(tempSymbol)) {
 
-            console.log(this);
+            
             // if numbers - then write value into a input field and add it to a current value
-    
+            console.log(this);
 
         
         } else if (tempSymbol === '='){
