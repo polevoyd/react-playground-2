@@ -18,7 +18,8 @@ class CalcButtons extends React.Component {
         };
     }
 
-    sendValueToState(button) {
+    // click handler
+    clickHandler(button) {
 
         const operations_ = ['*', '%', '-', '+'];
         const numbers_ = ['1','2','3','4','5','6','7','8','9','0'];
@@ -100,7 +101,7 @@ class CalcButtons extends React.Component {
             <div className="calculator-board">
                 <div className="input-field">{this.state.currentValue}</div>
                 <div className="square-buttons"> 
-                {buttonsArray.map( (element, index) => (<SquareButton onClick={e => this.sendValueToState(e)} symbol={element} key={'button_' + index} />))}
+                {buttonsArray.map( (element, index) => (<SquareButton onClick={e => this.clickHandler(e)} symbol={element} key={'button_' + index} />))}
                 </div>
             </div>
         );
