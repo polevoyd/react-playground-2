@@ -1,13 +1,13 @@
-import React from 'react';
+// import React from 'react';
 
-import './index.css';
+// import './index.css';
 
-class InputField extends React.Component {
-    render() {
-        return (
-            <input className="input-field" type="text" placeholder="0"></input>
-        );
-    }
-}
+// class InputField extends React.Component {
+//     render() {
+//         return (
+//             <input className="input-field" type="text" placeholder="0"></input>
+//         );
+//     }
+// }
 
-export default InputField;
+// export default InputField;
