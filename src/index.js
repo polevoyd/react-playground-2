@@ -35,7 +35,9 @@ class CalcButtons extends React.Component {
 
         } else if (numbers_.includes(tempSymbol)) {
 
-            if (this.state.currentValue.length < 7) {
+            // if ((tempSymbol === '0') && (this.state.currentValue == '0'))
+
+            if ((this.state.currentValue.length < 7)) {
                 this.setState({
                     currentValue: this.state.currentValue + tempSymbol
                 });
@@ -69,10 +71,11 @@ class CalcButtons extends React.Component {
                     break;
                 }
 
+                result = (result.toString().length > 7) ? result.toString().substr(0, 7) : result.toString();
                 this.setState({
-                    currentValue: result.toString(),
+                    currentValue: result,
                     tempOperation: '',
-                    tempValue: result.toString()
+                    tempValue: result
                 });
             }
         } else {
