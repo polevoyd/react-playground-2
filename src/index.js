@@ -9,6 +9,15 @@ import InputField from './InputField';
 // Component that renders squared buttons 
 class CalcButtons extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            firstValue: '',
+            currentValue: ''
+        };
+    }
+
     sendValueToState(button) {
 
         const operations_ = ['*', '%', '-', '+'];
@@ -24,12 +33,14 @@ class CalcButtons extends React.Component {
 
             
             // if numbers - then write value into a input field and add it to a current value
-            console.log(this);
+            // console.log(this);
 
-            // this.setState({
-            //     currentValue: 'Hello!'
-            // })
+            this.setState({
+                currentValue: this.state.currentValue + tempSymbol
+            })
 
+            
+            console.log(this.state.currentValue)
         
         } else if (tempSymbol === '='){
 
@@ -41,7 +52,7 @@ class CalcButtons extends React.Component {
 
         }
     }
-    
+
     render() {
         const buttonsArray = ['*', '%', '+', '-', '1', '2', '3', 'C', '4', '5', '6', '=', '7', '8', '9','0'];
         return buttonsArray.map( (element, index) => (<SquareButton onClick={e => this.sendValueToState(e)} symbol={element} key={'button_' + index} />));
@@ -50,14 +61,7 @@ class CalcButtons extends React.Component {
 
 // Final rendering of calculator
 class CalcBoard extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            firstValue: '',
-            currentValue: ''
-        }
-    }
 
  
 
