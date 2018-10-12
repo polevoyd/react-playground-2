@@ -12,14 +12,14 @@ class CalcButtons extends React.Component {
         super(props);
 
         this.state = {
-            firstValue: '',
+            tempValue: 0,
             currentValue: ''
         };
     }
 
 
     setValueToInputField() {
-
+        
     }
 
     sendValueToState(button) {
@@ -43,7 +43,6 @@ class CalcButtons extends React.Component {
                 currentValue: this.state.currentValue + tempSymbol
             })
 
-            
             console.log(this.state.currentValue)
         
         } else if (tempSymbol === '='){
@@ -52,8 +51,10 @@ class CalcButtons extends React.Component {
 
         } else {
 
-            console.log(tempSymbol);
-
+            console.log('C');
+            this.setState({
+                currentValue: ''      
+            });
         }
     }
 
@@ -61,7 +62,7 @@ class CalcButtons extends React.Component {
         const buttonsArray = ['*', '%', '+', '-', '1', '2', '3', 'C', '4', '5', '6', '=', '7', '8', '9','0'];
         return (
             <div className="calculator-board">
-                <input className="input-field" type="text" placeholder="0"></input>
+                <div className="input-field">{this.state.currentValue}</div>
                 <div className="square-buttons"> 
                 {buttonsArray.map( (element, index) => (<SquareButton onClick={e => this.sendValueToState(e)} symbol={element} key={'button_' + index} />))}
                 </div>

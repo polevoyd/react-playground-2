@@ -28,7 +28,7 @@
 }
 
 .square-button {
-  height: 5em;
+  height: 80px;
   border: 1px solid black;
 
   text-align: center;
@@ -43,11 +43,13 @@ h3 {
   font-size: 1.5em;
 }
 
-.input-field[type="text"] {
+.input-field {
   
   grid-row: 1;
   grid-column: 1;
-  font-size: 5em;
+  height: 80px;
+  font-size: 4em;
+  border: 1px black solid;
 }
 
 .input-field[type="text"]:focus {
