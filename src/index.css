@@ -1,26 +1,16 @@
-* {
-  /* outline: 3px solid orange; */
-}
-
 
 .calculator-board {
   display: grid;
-
   grid-template-columns: 100%;
   grid-template-rows: 20% 80%;
-
   max-width: 20em;
   max-height: 30em;
-
   margin: 10em auto;
-
   border: 1px solid black;
   border-radius: 0.5em;
-
 }
 
 .square-buttons {
-
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 25% 25% 25% 25%;
@@ -29,8 +19,6 @@
 
 .square-button {
   height: 80px;
-  border: 1px solid black;
-
   text-align: center;
 }
 
@@ -44,14 +32,11 @@ h3 {
 }
 
 .input-field {
-  
   grid-row: 1;
   grid-column: 1;
   height: 80px;
   font-size: 4em;
-  border: 1px black solid;
-}
-
-.input-field[type="text"]:focus {
-  
+  background-color: bisque;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid grey;
 }
