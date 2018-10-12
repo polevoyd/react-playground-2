@@ -35,23 +35,16 @@ class CalcButtons extends React.Component {
 
         } else if (numbers_.includes(tempSymbol)) {
 
-            
-            // if numbers - then write value into a input field and add it to a current value
-            // console.log(this);
-
             this.setState({
                 currentValue: this.state.currentValue + tempSymbol
             })
 
-            console.log(this.state.currentValue)
-        
         } else if (tempSymbol === '='){
 
             console.log(tempSymbol);
 
         } else {
 
-            console.log('C');
             this.setState({
                 currentValue: ''      
             });
