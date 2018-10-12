@@ -35,12 +35,17 @@ class CalcButtons extends React.Component {
 
         } else if (numbers_.includes(tempSymbol)) {
 
-            // if ((tempSymbol === '0') && (this.state.currentValue == '0'))
-
-            if ((this.state.currentValue.length < 7)) {
+            if ((tempSymbol === '0') && (this.state.currentValue === '0')) {
                 this.setState({
-                    currentValue: this.state.currentValue + tempSymbol
-                });
+                    currentValue: tempSymbol
+                })
+            } else {
+                
+                if ((this.state.currentValue.length < 7)) {
+                    this.setState({
+                        currentValue: this.state.currentValue + tempSymbol
+                    });
+                }
             }
             
         } else if (tempSymbol === '='){
