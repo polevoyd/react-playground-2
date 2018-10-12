@@ -16,6 +16,14 @@ class CalcButtons extends React.Component {
 
 // Final rendering of calculator
 class CalcBoard extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            firstValue: '',
+            currentValue: ''
+        }
+    }
     render(){
         return (
             <div className="calculator-board">
