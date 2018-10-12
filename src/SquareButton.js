@@ -8,16 +8,20 @@ class SquareButton extends React.Component {
     
     
 
-    sendValueToState() {
+    sendValueToState(button) {
 
         const operations_ = ['*', '%', '-', '+'];
         const numbers_ = ['1','2','3','4','5','6','7','8','9','0'];
 
-        if (operations_.includes(this.props.symbol)) {
+        const tempSymbol = button.target.textContent;
+
+        // console.log(button.target.textContent)
+
+        if (operations_.includes(tempSymbol)) {
             
             console.log('this is a operation!');
 
-        } else if (numbers_.includes(this.props.symbol)) {
+        } else if (numbers_.includes(tempSymbol)) {
 
             console.log('this is a number!');
         
@@ -27,15 +31,12 @@ class SquareButton extends React.Component {
         }
 
 
-        this.setState({
-            currentValue: this.state.currentValue += this.props.symbol
-        })
+        // this.setState({
+        //     currentValue: this.state.currentValue += tempSymbol
+        // })
     }
 
     render(props) {
-
-        
-
 
         return (
             <div className="square-button">
