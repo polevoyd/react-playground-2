@@ -18,6 +18,11 @@ class CalcButtons extends React.Component {
         };
     }
 
+
+    setValueToInputField() {
+        
+    }
+
     sendValueToState(button) {
 
         const operations_ = ['*', '%', '-', '+'];
