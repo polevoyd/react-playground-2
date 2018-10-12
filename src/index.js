@@ -13,6 +13,7 @@ class CalcButtons extends React.Component {
 
         this.state = {
             tempValue: 0,
+            tempOperation: '',
             currentValue: ''
         };
     }
@@ -32,6 +33,13 @@ class CalcButtons extends React.Component {
         if (operations_.includes(tempSymbol)) {
             
             console.log(tempSymbol);
+            
+            this.setState({
+                tempValue: this.state.currentValue,
+                tempOperation: tempSymbol,
+                currentValue: ''
+            });
+
 
         } else if (numbers_.includes(tempSymbol)) {
 
@@ -42,6 +50,36 @@ class CalcButtons extends React.Component {
         } else if (tempSymbol === '='){
 
             console.log(tempSymbol);
+            let result;
+
+
+            switch (this.state.tempOperation) {
+
+                case '+':
+                result = parseInt(this.state.tempValue) + parseInt(this.state.currentValue);
+                break;
+
+                case '-':
+                result = parseInt(this.state.tempValue) - parseInt(this.state.currentValue);
+                break;
+
+                case '*':
+                result = parseInt(this.state.tempValue) * parseInt(this.state.currentValue);
+                break;
+
+                case '%':
+                result = parseInt(this.state.tempValue) / parseInt(this.state.currentValue);
+                break;
+            
+                default:
+                    break;
+            }
+
+            this.setState({
+                currentValue: '',
+                tempOperation: '',
+                tempValue: result.toString()
+            });
 
         } else {
 
