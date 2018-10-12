@@ -4,11 +4,8 @@ import './index.css';
 
 class SquareButton extends React.Component {
 
-    
-    
-    
 
-    sendValueToState(button) {
+    sendValueToState(button, props) {
 
         const operations_ = ['*', '%', '-', '+'];
         const numbers_ = ['1','2','3','4','5','6','7','8','9','0'];
@@ -17,26 +14,24 @@ class SquareButton extends React.Component {
 
         if (operations_.includes(tempSymbol)) {
             
-            console.log('this is a operation!');
+            console.log(tempSymbol);
 
         } else if (numbers_.includes(tempSymbol)) {
 
-            console.log('this is a number!');
+            console.log(button);
+            // if numbers - then write value into a input field and add it to a current value
+    
+
         
         } else if (tempSymbol === '='){
 
-            console.log('this might be equal sign!');
+            console.log(tempSymbol);
 
         } else {
 
-            console.log('this is a C sign!');
+            console.log(tempSymbol);
 
         }
-
-
-        // this.setState({
-        //     currentValue: this.state.currentValue += tempSymbol
-        // })
     }
 
     render(props) {

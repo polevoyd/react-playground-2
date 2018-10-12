@@ -16,8 +16,8 @@ class CalcButtons extends React.Component {
 
 // Final rendering of calculator
 class CalcBoard extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             firstValue: '',
