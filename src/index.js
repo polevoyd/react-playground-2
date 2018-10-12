@@ -5,7 +5,7 @@ import './index.css';
 import SquareButton from './SquareButton';
 
 
-// Component that renders squared buttons 
+// Main component
 class CalcButtons extends React.Component {
 
     constructor(props) {
