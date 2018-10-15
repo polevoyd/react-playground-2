@@ -20,7 +20,7 @@ body {
   max-height: 30em;
   margin: 10em auto;
   border-radius: 0.5em;
-  border: orange solid 5px;
+  border: orange solid 10px;
 }
 
 .square-buttons {
@@ -60,7 +60,6 @@ h3 {
   height: 80px;
   font-size: 4em;
   background-color: var(--color3);
-  border-radius: 6px 6px 0 0;
   box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
   outline: 1px solid grey;
   outline-offset: -3px;
