@@ -18,7 +18,7 @@ class CalcButtons extends React.Component {
     }
 
     changeColors() {
-
+        
         const arrayOfRandomColors = new Array(30).fill(0);
         const tempArray = arrayOfRandomColors.map(element => {
             return 'rgba(' + Math.ceil(Math.random() * 255) + ', ' + Math.ceil(Math.random() * 255) + ', ' + Math.ceil(Math.random() * 255) + ', 1)';
@@ -30,9 +30,6 @@ class CalcButtons extends React.Component {
                 document.querySelector('.calculator-board').style.border = 10 + 'px solid ' + element;
             }, 100 * index)
         });
- 
-
-
     }
 
     clickHandler(button) {
