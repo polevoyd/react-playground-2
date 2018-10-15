@@ -17,6 +17,20 @@ class CalcButtons extends React.Component {
         };
     }
 
+    changeColors() {
+
+        // --color1: rgba(140, 179, 105, 1);
+        // --color2: rgba(244, 226, 133, 1);
+        // --color3: rgba(244, 162, 89, 1);
+        // --color4: rgba(91, 142, 125, 1);
+        // --color5: rgba(188, 75, 81, 1);
+
+        let arrayOfRandomColors = Array.new(10);
+        arrayOfRandomColors.map(element => {
+            return 
+        })
+    }
+
     clickHandler(button) {
 
         const operations_ = ['*', '%', '-', '+'];
