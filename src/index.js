@@ -19,20 +19,25 @@ class CalcButtons extends React.Component {
 
     changeColors() {
 
-        // --color1: rgba(140, 179, 105, 1);
-        // --color2: rgba(244, 226, 133, 1);
-        // --color3: rgba(244, 162, 89, 1);
-        // --color4: rgba(91, 142, 125, 1);
-        // --color5: rgba(188, 75, 81, 1);
-
-        let arrayOfRandomColors = Array.new(10);
-        arrayOfRandomColors.map(element => {
-            return 
+        const arrayOfRandomColors = new Array(30).fill(0);
+        const tempArray = arrayOfRandomColors.map(element => {
+            return 'rgba(' + Math.ceil(Math.random() * 255) + ', ' + Math.ceil(Math.random() * 255) + ', ' + Math.ceil(Math.random() * 255) + ', 1)';
         })
+        
+        tempArray.forEach((element, index) => 
+        {
+            setTimeout(() => {
+                document.querySelector('.calculator-board').style.border = 10 + 'px solid ' + element;
+            }, 100 * index)
+        });
+ 
+
+
     }
 
     clickHandler(button) {
 
+        this.changeColors()
         const operations_ = ['*', '%', '-', '+'];
         const numbers_ = ['1','2','3','4','5','6','7','8','9','0'];
         const tempSymbol = button.target.textContent;

@@ -19,7 +19,6 @@ body {
   max-width: 20em;
   max-height: 30em;
   margin: 10em auto;
-  border-radius: 0.5em;
   border: orange solid 10px;
 }
 
@@ -63,7 +62,6 @@ h3 {
   box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
   outline: 1px solid grey;
   outline-offset: -3px;
-  -moz-outline-radius: 5px;
   padding-left: 6px;
   box-shadow: inset 0px 0px 1px 5px rgba(73, 73, 73, 0.75);
 }
