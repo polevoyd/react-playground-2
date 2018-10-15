@@ -1,4 +1,17 @@
 
+:root {
+  --color1: rgba(89, 195, 195, 1);
+  --color2: rgba(82, 72, 156, 1);
+  --color3: rgba(235, 235, 235, 1);
+  --color4: rgba(202, 210, 197, 1);
+  --color5: rgba(132, 169, 140, 1);
+}
+
+
+body {
+  background-color: var(--color3);
+}
+
 .calculator-board {
   display: grid;
   grid-template-columns: 100%;
@@ -6,8 +19,8 @@
   max-width: 20em;
   max-height: 30em;
   margin: 10em auto;
-  border: 1px solid black;
   border-radius: 0.5em;
+  border: orange solid 5px;
 }
 
 .square-buttons {
@@ -20,14 +33,24 @@
 .square-button {
   height: 80px;
   text-align: center;
+  -webkit-box-shadow: inset 0px 0px 23px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 23px -1px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 23px -1px rgba(0,0,0,0.75);
+  border: 1px solid grey;
 }
 
 .square-button:hover {
-  background-color: antiquewhite;
+  background-color: var(--color4);
+  
+}
+
+.square-button:active {
+  -webkit-box-shadow: inset 5px 5px 80px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 5px 5px 80px -5px rgba(0,0,0,0.75);
+  box-shadow: inset 5px 5px 50px -5px rgba(0,0,0,0.75);
 }
 
 h3 {
-  height: 100%;
   font-size: 1.5em;
 }
 
@@ -36,7 +59,12 @@ h3 {
   grid-column: 1;
   height: 80px;
   font-size: 4em;
-  background-color: bisque;
+  background-color: var(--color3);
   border-radius: 6px 6px 0 0;
-  border-bottom: 1px solid grey;
+  box-shadow: inset 0px 0px 5px -1px rgba(0,0,0,0.75);
+  outline: 1px solid grey;
+  outline-offset: -3px;
+  -moz-outline-radius: 5px;
+  padding-left: 6px;
+  box-shadow: inset 0px 0px 1px 5px rgba(73, 73, 73, 0.75);
 }
